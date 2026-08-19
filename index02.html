@@ -1,0 +1,52 @@
+<!DOCTYPE html> 
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <title>臺灣牛的中字網站</title>
+</head>
+
+<style>
+    /*relative：佔空間，原位置移動；absolute：不佔空間(浮上)，以外層為基準定位移動
+    /*https://medium.com/ui-ux練功坊/position-屬性的基礎概念-5931254e5203*/
+    /*https://ithelp.ithome.com.tw/articles/10398654*/
+
+    /* 設定影片容器的樣式 */
+    .video-container {
+        position: relative;  /*相對定位，讓字幕容器以影片容器定位*/
+        width: 1280px;  /*同影片大小，即讓影片佔滿影片容器*/
+        height: 720px;
+    }
+    /* 設定字幕的樣式 */
+    .subtitle {
+        /*定位字幕*/
+        position: absolute;  /*絕對定位，讓字幕容器以影片容器定位*/
+        bottom: 10%;  /*字幕容器從影片容器底部往上10%*/
+        left: 50%;  /*字幕容器從影片容器左邊往右一半*/
+        transform: translateX(-50%);  /*字幕容器往左回半個字幕容器的寬度，讓字幕水平置中*/
+        /*字幕外觀*/
+        color: white;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 5px 10px; /*字幕容器內邊距，上下5px，左右10px*/
+        font-size: 24px;
+
+    }
+
+</style>
+
+<body>
+    <h1>[特效繁中] i'M THE TREND EP. 5</h1>
+    <div class="video-container"> <!-- 觀看影片的容器(div) -->
+        <iframe
+            src="https://www.youtube.com/embed/mMg0PV3FAfE"
+            width="1280"
+            height="720">
+        </iframe>
+
+        <div class="subtitle">  <!-- 字幕容器 -->
+            這是中字幕內容
+        </div>
+    </div>
+</body>
+
+</html>
