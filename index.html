@@ -6,37 +6,43 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>臺灣牛的中字網站-YT API</title>
+    <title>臺灣牛的中字網站 - 畫面大小活動(CSS)</title>
     <script src="https://www.youtube.com/iframe_api"></script>
     <script src="video_script.js"></script>
+
+    <style>
+        h1 {
+            width: 90%;  /*標題寬度為視窗寬度的90%*/
+            font-size: 3vw;  /*vw=viewport width，標題字體大小隨視窗寬度調整(5%)*/
+            margin: 0 auto;
+        }
+
+        .video-container {
+            background-color: pink;  /*(暫時設定)*/
+            position: relative;
+            width: 90%;  /*影片容器寬度為視窗寬度的90%(標題和影片向左對齊)*/
+            aspect-ratio: 16/9;  /*影片容器寬高比固定16:9縮放*/
+            margin: 0 auto;  /*水平置中*/
+            /*height: 360px;*/
+        }
+
+        .subtitle {
+            position: absolute;
+            bottom: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 5px 10px;
+            font-size: 24px;
+        }
+
+        #player {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
 </head>
-
-<style>
-    .video-container {
-        background-color: pink;  /*(暫時設定)*/
-        position: relative;
-        width: 90%;  /*影片容器寬度為視窗寬度的90%*/
-        aspect-ratio: 16/9;  /*影片容器寬高比固定16:9縮放*/
-        margin: 0 auto;  /*水平置中*/
-        /*height: 360px;*/
-    }
-
-    .subtitle {
-        position: absolute;
-        bottom: 10%;
-        left: 50%;
-        transform: translateX(-50%);
-        color: white;
-        background-color: rgba(0, 0, 0, 0.5);
-        padding: 5px 10px;
-        font-size: 24px;
-    }
-
-    #player {
-        width: 100%;
-        height: 100%;
-    }
-</style>
 
 <body>
     <h1>[特效中字]i-dle [Syncopation] 世巡花絮 Behind the Rhythm</h1>
