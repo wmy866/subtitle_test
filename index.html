@@ -1,3 +1,6 @@
+<!-- 影片容器置中、影片同影片容器大小並隨視窗調整但固定16:9 -->
+<!-- 標題隨視窗大小跳行 -->
+<!-- TESTing -->
 <!DOCTYPE html>
 <html lang="zh-TW">
 
@@ -10,9 +13,12 @@
 
 <style>
     .video-container {
-        position: relative;  /*相對定位，讓字幕容器以影片容器定位*/
-        width: 640px;  /*同影片大小，即讓影片佔滿影片容器*/
-        height: 360px;
+        background-color: pink;  /*(暫時設定)*/
+        position: relative;
+        width: 90%;  /*影片容器寬度為視窗寬度的90%*/
+        aspect-ratio: 16/9;  /*影片容器寬高比固定16:9縮放*/
+        margin: 0 auto;  /*水平置中*/
+        /*height: 360px;*/
     }
 
     .subtitle {
@@ -25,19 +31,17 @@
         padding: 5px 10px;
         font-size: 24px;
     }
+
+    #player {
+        width: 100%;
+        height: 100%;
+    }
 </style>
 
 <body>
     <h1>[特效中字]i-dle [Syncopation] 世巡花絮 Behind the Rhythm</h1>
     <div class="video-container">
-        <!--<iframe
-            src="https://www.youtube.com/embed/mMg0PV3FAfE"
-            width="1280"
-            height="720">
-        </iframe>-->
-
         <div id="player"></div>
-
         <div class="subtitle">
             世巡海外首場是台北大巨蛋!
         </div>

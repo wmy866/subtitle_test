@@ -1,24 +1,26 @@
+<!-- 字幕懸浮(CSS)：絕對&相對位置 -->
 <!-- TEST OK -->
 <!DOCTYPE html> 
 <html lang="zh-TW">
 
 <head>
     <meta charset="UTF-8">
-    <title>臺灣牛的中字網站</title>
+    <title>臺灣牛的中字網站 - 字幕懸浮</title>
 </head>
 
 <style>
-    /*relative：佔空間，原位置移動；absolute：不佔空間(浮上)，以外層為基準定位移動
+    /*relative：佔空間，原位置or以外層為基準移動；absolute：不佔空間(浮上)，以外層為基準移動
     /*https://medium.com/ui-ux練功坊/position-屬性的基礎概念-5931254e5203*/
     /*https://ithelp.ithome.com.tw/articles/10398654*/
 
-    /* 設定影片容器的樣式 */
+    /* 影片容器的樣式 */
     .video-container {
         position: relative;  /*相對定位，讓字幕容器以影片容器定位*/
         width: 1280px;  /*同影片大小，即讓影片佔滿影片容器*/
         height: 720px;
     }
-    /* 設定字幕的樣式 */
+
+    /* 字幕的樣式 */
     .subtitle {
         /*定位字幕*/
         position: absolute;  /*絕對定位，讓字幕容器以影片容器定位*/
@@ -30,14 +32,12 @@
         background-color: rgba(0, 0, 0, 0.5);
         padding: 5px 10px; /*字幕容器內邊距，上下5px，左右10px*/
         font-size: 24px;
-
     }
-
 </style>
 
 <body>
     <h1>[特效繁中] i'M THE TREND EP. 5</h1>
-    <div class="video-container"> <!-- 觀看影片的容器(div) -->
+    <div class="video-container"> <!-- 影片容器(div) -->
         <iframe
             src="https://www.youtube.com/embed/mMg0PV3FAfE"
             width="1280"
