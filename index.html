@@ -1,0 +1,71 @@
+<!-- 影片容器置中、影片同影片容器大小並隨視窗調整但固定16:9 -->
+<!-- 標題隨視窗大小跳行 -->
+<!-- TESTing -->
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <title>臺灣牛的中字網站 - 畫面大小活動(CSS)</title>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="video_script.js"></script>
+
+    <style>
+        header {
+            border-style: solid;  /*框線(暫設)*/
+            background-color: blueviolet;  /*(暫設)*/
+
+        }
+        .video-inform {
+            width: 90%;  /*寬度設視窗寬度90%*/
+            margin: auto;  /*外距置中*/
+            border-style: solid;  /*(暫設)*/
+            background-color: purple;  /*(暫設)*/
+        }
+        h1 {
+            font-size: clamp(24px, 3vw, 72px);  /*字體大小隨視窗調整並設最小最大限制(vw=viewport width)*/
+            font-weight: 1000;  /*粗體*/
+            border-style: solid;  /*(暫設)*/
+            background-color: black;  /*(暫設)*/
+            color: white;  /*(暫設)*/
+        }
+        .video-container {
+            position: relative;
+            aspect-ratio: 16/9;  /*影片容器固定16:9縮放*/
+            border-style: solid;  /*(暫設)*/
+            background-color: yellow;  /*(暫設)*/
+        }
+        .subtitle {
+            position:absolute;
+            bottom: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            background-color: black;
+            padding: 5px 10px;  /*內距上下&左右*/
+            font-size: 24px;
+        }
+        #player {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>預留畫面標頭</h1>
+    </header>
+    <div class="video-inform">
+        <h1>［特效中字］i-dle [Syncopation] 世巡花絮 Behind the Rhythm EP.02</h1>
+        <div class="video-container">
+            <div id="player"></div>
+            <div class="subtitle">
+                世巡海外首場是台北大巨蛋!
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
