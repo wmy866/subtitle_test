@@ -5,7 +5,7 @@ let player;  //定義變數用來存放YT播放器
 
 function onYouTubeIframeAPIReady() {
     player = new YT.Player("player",{  //"player"是HTML中id為player的容器
-        videoId: "mMg0PV3FAfE",  //GH：4WybwsKIeIQ
+        videoId: "4WybwsKIeIQ",  //GH：4WybwsKIeIQ
         events: {
             onReady: onPlayerReady  //當播放器準備好時，呼叫onPlayerReady函式
         }
