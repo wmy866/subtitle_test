@@ -19,8 +19,8 @@ function onPlayerReady(event) {
         const currentTime = player.getCurrentTime();  //取得當下影片秒數
         const playerState = player.getPlayerState();
 
-        /*console.log("現在播放時間：" + currentTime);  //顯示當下秒數
-        console.log("播放狀態：" + playerState);*/
+        subtitleElement.textContent = "目前秒數：" + currentTime;  //將字幕div的內容改成目前秒數
+
         if (playerState === 1){
             console.log("播放中，目前秒數：" + currentTime);
         } else if (playerState ===2){
@@ -28,7 +28,6 @@ function onPlayerReady(event) {
         } else if (playerState === 3){
             console.log("緩衝中，目前秒數：" + currentTime);
         }
-
     }, 1000);
 
     const subtitles = [
